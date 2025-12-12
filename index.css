@@ -127,8 +127,8 @@
 
 #head_layout .badges {
   position: absolute;
-  top: 600px;
-  left: 20px;
+  top: 550px;
+  left: 10px;
 }
 #head_layout .badges .left_badge{
   border-radius: 10px;
@@ -144,7 +144,7 @@
 }
 #head_layout .badges  .right_badge{
   position: fixed;
-  left: 1480px;
+  left: 1350px;
   bottom: 80px;
 }
 #head_layout .badges  .right_badge img {
@@ -172,7 +172,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  left: 1480px;
+  left: 1350px;
   bottom: 10px;
 }
 
@@ -682,7 +682,7 @@
 
 #foot_layout .inner {
   display: flex;
-  margin: 0 160px;
+  margin: 0 100px;
 }
 #foot_layout .inner .foot_left_wrap {
   width: 100%;
@@ -691,7 +691,7 @@
 }
 #foot_layout .inner .foot_left_wrap .top_text {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   font-size: 18px;
   font-weight: bold;
   color: #8C8C8C;
