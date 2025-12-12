@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="35" viewBox="0 0 210 35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4f4f4;
+      }
+
+      .cls-2 {
+        fill: #111;
+        font-size: 12px;
+        font-family: NotoSansKR-Medium, Noto Sans KR;
+        font-weight: 500;
+        letter-spacing: -0.025em;
+      }
+    </style>
+  </defs>
+  <g id="그룹_1562" data-name="그룹 1562" transform="translate(-1691 -13)">
+    <rect id="사각형_174" data-name="사각형 174" class="cls-1" width="210" height="28" rx="14" transform="translate(1691 13)"/>
+    <text id="로그인_후_다양한_혜택을_받아보세요_" data-name="로그인 후 다양한 혜택을 받아보세요!" class="cls-2" transform="translate(1796 32)"><tspan x="-87.408" y="0">로그인 후 다양한 혜택을 받아보세요!</tspan></text>
+    <path id="다각형_1" data-name="다각형 1" class="cls-1" d="M4,0,8,7H0Z" transform="translate(1800 48) rotate(180)"/>
+  </g>
+</svg>

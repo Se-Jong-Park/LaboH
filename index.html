@@ -2,10 +2,819 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LaboH">
+  <meta property="og:title" content="LaboH Korea">
+  <meta property="og:url" content="https://laboh.co.kr/">
   <title>라보에이치 공식몰</title>
+  <!-- reset CSS (기본 CSS 제거, 외부 기능)-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+  <!-- Google Meterial icon (아이콘 불러오기, 외부 기능)-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"rel="stylesheet">
+  <!-- lodash cdn(화면 버벅거림을 방지, 외부 기능) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- gsap cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ScrollMagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- ScrollTo-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollToPlugin.min.js" integrity="sha512-kz526itdNcpyMs18TLPOhsnIeOIO1JywWKbbF77zR+ZKpZ4gwubXhwaURHpt5Se9AAqSK2j8ID0LnfXsB2Jkjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- swiper -->
+  <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./common.css">
+  <script defer src="./index.js"></script>
 </head>
 <body>
-  
+  <!-- HEAD -->
+   <div id="head_layout">
+    <div class="inner">
+      <div class="inner_background scroll-spy"></div>
+      <div class="all_menu">
+        <div class="menu_btn">
+          <span class="material-icons-round">menu</span>
+        </div>
+        <div class="menu_close">
+          <span class="material-icons-round">close</span>
+        </div>
+        <a class="header_logo" href="">
+          <img class="logo" src="./images/Labo_logo.png" alt="라보에이치 로고">
+        </a>
+        <div class="main-menu">
+          <ul class="menu">
+            <li>BEST</li>
+            <li>첫구매</li>
+            <li>유형별</li>
+            <li>두피고민별</li>
+            <li>선물하기</li>
+            <li>이벤트</li>
+          </ul>
+          <div class="right_wrap">
+            브랜드 스토리
+          </div>
+          <div class="icons">
+            <span class="material-icons-round">search</span>
+            <span class="material-icons-round">person</span>
+            <span class="material-icons-round">shopping_bag</span>
+          </div>
+          <a class="login_event" href="">
+              <img src="./images/gnb-join-tooltip.svg" alt="로그인 후 다양한 해택을 받아보세요!">
+            </a>
+        </div> <!-- main-menu -->
+      </div>
+    </div> <!--inner -->
+    <div id="menu_bar">
+      <!-- 2depth -->
+      <ul class="menu_list">
+        <li>
+          <p>BEST</p>
+          <!-- 3depth -->
+        </li>
+        <li>
+          <p>첫구매</p>
+          <!-- 3depth -->
+        </li>
+        <li>
+          <p>유형별</p>
+          <!-- 3depth -->
+           <ul>
+            <li>샴푸</li>
+            <li>트리트먼트</li>
+            <li>앰플/토닉</li>
+            <li>스케일러</li>
+            <li>헤어도구</li>
+            <li>선물세트</li>
+           </ul>
+        </li>
+        <li>
+          <p>두피고민별</p>
+          <!-- 3depth -->
+          <ul>
+            <li>탈모증상완화</li>
+            <li>지성두피&쿨링</li>
+            <li>비듬&가려움</li>
+            <li>민감&저자극</li>
+            <li>스페셜케어</li>
+            <li>헤어도구</li>
+            <li>선물용세트</li>
+          </ul>
+        </li>
+        <li>
+          <p>선물하기</p>
+          <!-- 3depth -->
+        </li>
+        <li>
+          <p>이벤트</p>
+          <ul>
+            <li>이벤트</li>
+            <li>공지사항</li>
+            <li>문의</li>
+            <li>FAQ</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- badge -->
+    <div class="badges">
+      <div class="left_badge">
+        <img src="./images/Labo_badge.png" alt="공유만 하면 적립금">
+      </div>
+      <div class="right_badge">
+        <img src="./images/Labo_kakao.png" alt="라보에이치 카카오톡">
+        <span class="material-icons-round">close</span>
+      </div>
+      <!-- To-TOP -->
+      <div id="to-top">
+        <span class="material-icons-round">arrow_upward</span>
+      </div>
+    </div>
+   </div> <!-- head_layout -->
+   <!-- BODY -->
+   <div id="body_layout">
+    <section class="banner"> <!-- BANNER -->
+      <div class="inner"></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"> <!-- SLIDE -->
+            <img src="./images/Labo_banner_1.jpg" alt="배너1">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">라보에이치 공식몰 선물하기 사용설명서</p>
+              <p class="mid back-to-position to-up delay-2">마음을 전하는 가장 쉬운 방법<br>라보에이치 공식몰 선물하기</p>
+              <p class="bot back-to-position to-up delay-3">자세히보기 ☜ Click!!</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_2.jpg" alt="배너2">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">라보에이치 공식몰<br>APP 출시 기념 이벤트!</p>
+              <p class="mid back-to-position to-up delay-2">지금 APP으로 구매하면 핵이득!</p>
+              <p class="bot back-to-position to-up delay-3">자세히 보기 CLICK!</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_3.jpg" alt="배너3">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">만나서 반가워요!<br>라보몰 신규회원 웰컴딜</p>
+              <p class="mid back-to-position to-up delay-2">신규회원 첫구매 할인쿠폰</p>
+              <p class="bot back-to-position to-up delay-3">10,000원 웰컴딜 상품 4종 中 택1</p>  
+            </div>
+            
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_4.jpg" alt="배너4">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">신규회원 이벤트<br>10% 할인 + 1만원 쿠폰</p>
+              <p class="mid back-to-position to-up delay-2">쏟아지는 공식몰 해택 지금바로 가입하세요!</p>
+              <p class="bot back-to-position to-up delay-3">라보에이치는 공식몰에서!</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_5.jpg" alt="배너5">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">놓치면 품.절!<br>지금 바로 GET하세요</p>
+              <p class="mid back-to-position to-up delay-2">퍼퓸기획 블프 한정 특가 50% 할인</p>
+              <p class="bot back-to-position to-up delay-3">특가 보러가기 ☜ CLICK!!</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_6.jpg" alt="배너6">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">두피강화 클리닉!<br>두피는 라보가 잘한다</p>
+              <p class="mid back-to-position to-up delay-2">함께 쓰면 시너지! 두피&모발 강화 루틴</p>
+              <p class="bot back-to-position to-up delay-3">한정 구성으로 만나보세요.</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_7.jpg" alt="배너7">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">BEST 추천 딜!<br>UP TO 46% OFF</p>
+              <p class="mid back-to-position to-up delay-2">멤버 전용 / 쟁이기 세트</p>
+              <!-- <p class="bot back-to-position to-up delay-3"></p> -->  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_8.jpg" alt="배너8">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">라보에이치 크리스마스 페스티벌</p>
+              <p class="mid back-to-position to-up delay-2">산타가 전하는 두피 선물</p>
+              <p class="bot back-to-position to-up delay-3">기획전 바로가기 ☜ CLICK!!</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_9.jpg" alt="배너9">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">공식몰 친구 추천 이벤트</p>
+              <p class="mid back-to-position to-up delay-2">친구에게 카톡만 보내도 100원 드려요!!<br>초대받은 친구는 3000원+쿠폰팩 GET!!</p>
+              <p class="bot back-to-position to-up delay-3">공유하기 ☜ CLICK!!</p>  
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/Labo_banner_10.jpg" alt="배너10">
+            <div class="banner_text">
+              <p class="top back-to-position to-up delay-1">공식몰 쟁이기 세트<br>15% 추가할인 쿠폰 + 추가증정</p>
+              <p class="mid back-to-position to-up delay-2">라보에이치 한번쓰면<br>어짜피 다른 샴푸 못쓰니까!</p>
+              <p class="bot back-to-position to-up delay-3">only 멤버전용</p>
+            </div>
+          </div>
+          <!-- <div class="progress_bar"></div> 나중에 처리하기 --> 
+        </div> <!-- swiper-wrapper -->
+      </div>
+    </section> <!-- BANNER -->
+    <section class="mini_menu">
+      <div class="menu">
+        <div class="menu_text">
+          <img src="./images/Labo_page_1.jpg" alt="회원가입 해택">
+          <p>회원가입 해택</p>
+        </div>
+        <div class="menu_text">
+          <img src="./images/Labo_page_2.jpg" alt="첫구매고객 웰컴딜">
+          <p>첫구매고객 웰컴딜</p>
+        </div>
+        <div class="menu_text">
+          <img src="./images/Labo_page_3.jpg" alt="공식몰 단독">
+          <p>공식몰 단독</p>
+        </div>
+        <div class="menu_text">
+          <img src="./images/Labo_page_4.jpg" alt="이달의 기획전">
+          <p>이달의 기획전</p>
+        </div>
+        <div class="menu_text">
+          <img src="./images/Labo_page_5.jpg" alt="할인쿠폰">
+          <p>할인쿠폰</p>
+        </div>
+        <div class="menu_text">
+          <img src="./images/Labo_page_6.jpg" alt="이벤트">
+          <p>이벤트</p>
+        </div>
+        <div class="menu_text">
+          <img src="./images/Labo_page_7.jpg" alt="선물하기">
+          <p>선물하기</p>
+        </div>
+      </div>
+    </section> <!-- MENI_MENU -->
+    <section class="special_items">
+      <div class="inner">
+        <div class="head_line">
+          <p>지금 여기, 오직 공식몰에서만!</p>
+        </div>
+        <div class="items">
+          <div class="show_item">
+            <img src="./images/Labo_only_1.jpg" alt="탈모증상완화 민감더마 샴푸 400ml">
+            <div class="top_text">
+              <p class="review">리뷰 46</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">탈모증상완화 민감더마 샴푸 400ml</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">13%</p>
+              <p class="sale_price">20,900원</p>
+              <p class="price">24,000원</p>
+            </div>
+            <div class="foot_text">
+              <!-- <p class="max_sale">최대혜택가</p> -->
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_4.jpg" alt="[겨울케어세트] 탈모증상완화 두피강화 샴푸 에코세트+여행용 112ml">
+            <div class="top_text">
+              <p class="review">리뷰 83</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울케어세트] 탈모증상완화 두피강화 샴푸<br>에코세트+여행용 112ml</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">53%</p>
+              <p class="sale_price">34,500원</p>
+              <p class="price">72,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">30,360원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_3.jpg" alt="[겨울케어세트] 두피강화클리닉 쿨링&노세범 750ml 2입+리필 400ml+여행용 112ml 2개">
+            <div class="top_text">
+              <p class="review">리뷰 342</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="best">BEST</div>
+            <div class="mid_text">
+              <p class="item_name">[겨울케어세트] 두피강화클리닉 쿨링&노세범<br>750ml 2입+리필 400ml+여행용 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">36%</p>
+              <p class="sale_price">61,800원</p>
+              <p class="price">96,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">54,390원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_2.jpg" alt="[겨울케어세트] 두피강화클리닉 앰플토닉 100ml 3입+여행용 샴푸 112ml 2개">
+            <div class="top_text">
+              <p class="review">리뷰 101</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울케어세트] 두피강화클리닉 앰플토닉<br>100ml 3입+여행용 샴푸 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">34%</p>
+              <p class="sale_price">47,700원</p>
+              <p class="price">72,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">41,980원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_5.jpg" alt="[겨울케어세트] 두피강화클리닉 캡슐 트리트먼트 220ml 4입+여행용 샴푸 112ml 2개">
+            <div class="top_text">
+              <p class="review">리뷰 107</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울케어세트] 두피강화클리닉 캡슐 트리트<br>먼트 220ml 4입+여행용 샴푸 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">40%</p>
+              <p class="sale_price">40,800원</p>
+              <p class="price">68,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">35,910원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_6.jpg" alt="[겨울두피리츄얼] 리컨디션 포맨 남성 세트">
+            <div class="top_text">
+              <p class="review">리뷰 2,004</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.9</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울두피리츄얼] 리컨디션 포맨 남성 세트</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">32%</p>
+              <p class="sale_price">54,700원</p>
+              <p class="price">80,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">48,140원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_7.jpg" alt="탈모증상완화 민감더마 샴푸 400ml">
+            <div class="top_text">
+              <p class="review">리뷰 2,003</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.9</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울두피리츄얼] 리컨디션 포우먼 여성 세트</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">43%</p>
+              <p class="sale_price">74,100원</p>
+              <p class="price">128,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">65,510원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img src="./images/Labo_only_8.jpg" alt="탈모증상완화 민감더마 샴푸 400ml">
+            <div class="top_text">
+              <p class="review">리뷰 1,927</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울케어세트] 두피강화클리닉 겨울케어 종<br>합세트+여행용 샴푸 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">44%</p>
+              <p class="sale_price">74,100원</p>
+              <p class="price">132,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">61,510원</p>
+            </div>
+          </div>
+        </div>
+        <div class="foot_line">
+          <div class="more_items">
+            <p>상품 더 보기 ></p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- SPECIAL_ITEMS -->
+    <section class="sub_banner">
+      <div class="inner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_1.jpg" alt="BLACK FRIDAY 1년을 라보에이치 직영몰 쇼핑찬스!">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_2.jpg" alt="여행용 샴푸 100% 증정! 1년치 쟁이기 구성 최대 46% + 사은품">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_3.jpg" alt="첫구매라면 클릭! 라보에이치 공식몰 첫 구매 웰컴 900원 딜">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_3.jpg" alt="첫구매라면 클릭! 라보에이치 공식몰 첫 구매 웰컴 900원 딜">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_4.jpg" alt="지금 1초 가입! 웰컴 10% OFF+플친 전용 추가 쿠폰까지!">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_5.jpg" alt="공식몰 APP 출시기념 이벤트 APP전용 혜택 받아가세요.">
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/Labo_subbanner_6.jpg" alt="멤버전용 / 쟁이기세트! BEST 추천 딜! UP TO 46% OFF">
+              </div>
+            </div>
+          </div>
+        </div>
+        </section> <!-- SUB_BANNER -->
+    <section class="best_items">
+      <div class="inner">
+        <div class="head_line">
+          <p>라보에이치 베스트 상품</p>
+        </div>
+        <div class="item_list">
+          <p class="list_green">전체</p>
+          <p>샴푸</p>
+          <p>트리트먼트</p>
+          <p>앰프/토닉</p>
+        </div>
+        <div class="items">
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_1.jpg" alt="[겨울두피리츄얼] 리컨디션 포맨 남성 세트">
+            <p class="num">01</p>
+            <div class="top_text">
+              <p class="review">리뷰 2,004</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.9</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">[겨울두피리츄얼] 리컨디션 포맨 남성 세트</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">32%</p>
+              <p class="sale_price">54,700원</p>
+              <p class="price">80,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">48,140원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_2.jpg" alt="[겨울케어세트] 탈모증상완화 두피강화 샴푸 에코세트+여행용 112ml">
+            <p class="num">02</p>
+            <div class="top_text">
+              <p class="review">리뷰 38</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.9</p>
+            </div>
+            <div class="popular">인기상품</div>
+            <div class="mid_text">
+              <p class="item_name">[블프특가] 두피강화 페어앤프리지아 샴푸<br>트리트먼트 2종 세트 333ML+100ML</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">50%</p>
+              <p class="sale_price">9,900원</p>
+              <p class="price">19,800원</p>
+            </div>
+            <div class="foot_text">
+              <!-- <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">30,360원</p> -->
+            </div>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_3.jpg" alt="『두피강화 선물세트』탈모증상완화 두피강<br>화 샴푸 750ml+리필 400ml+샴푸 112ml">
+            <p class="num">03</p>
+            <div class="top_text">
+              <p class="review">리뷰 12</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.8</p>
+            </div>
+            <div class="best">BEST</div>
+            <div class="popular">인기상품</div>
+            <div class="mid_text">
+              <p class="item_name">『두피강화 선물세트』탈모증상완화 두피강<br>화 샴푸 750ml+리필 400ml+샴푸 112ml</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">43%</p>
+              <p class="sale_price">39,600원</p>
+              <p class="price">69,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">34,850원</p>
+            </div>
+            <p class="add_info">선물세트</p>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_4.jpg" alt="탈모증상완화 쿨링&노세범 샴푸 750ml 2개<br>+두피강화 샴푸 112ml 2개">
+            <p class="num">04</p>
+            <div class="top_text">
+              <p class="review">리뷰 12</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.9</p>
+            </div>
+            <div class="best">BEST</div>
+            <div class="mid_text">
+              <p class="item_name">탈모증상완화 쿨링&노세범 샴푸 750ml 2개<br>+두피강화 샴푸 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">42%</p>
+              <p class="sale_price">52,600원</p>
+              <p class="price">90,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">46,290원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_5.jpg" alt="두피강화 클리닉 앰플 토닉 탈모증상완화<br>100ml 2개+두피강화 샴푸 112ml 2개">
+            <p class="num">05</p>
+            <div class="top_text">
+              <p class="review">리뷰 10</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.6</p>
+            </div>
+            <div class="best">BEST</div>
+            <div class="popular">인기상품</div>
+            <div class="mid_text">
+              <p class="item_name">두피강화 클리닉 앰플 토닉 탈모증상완화<br>100ml 2개+두피강화 샴푸 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">34%</p>
+              <p class="sale_price">31,900원</p>
+              <p class="price">48,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">28,080원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_6.jpg" alt="24년 BEST 상품 모음딜">
+            <p class="num">06</p>
+            <div class="top_text">
+              <p class="review">리뷰 13</p>
+              <p class="review_star">★</p>
+              <p class="review_score">4.6</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">24년 BEST 상품 모음딜</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">40%</p>
+              <p class="sale_price">27,000원</p>
+              <p class="price">45,000원</p>
+            </div>
+            <div class="foot_text">
+              <!-- <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">48,140원</p> -->
+            </div>
+            <p class="add_info">대용량</p>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_7.jpg" alt="두피강화 클리닉 캡슐 트리트먼트 220ml 4개<br>+두피강화 샴푸 112ml 2개">
+            <p class="num">07</p>
+            <div class="top_text">
+              <p class="review">리뷰 16</p>
+              <p class="review_star">★</p>
+              <p class="review_score">5.0</p>
+            </div>
+            <div class="best">BEST</div>
+            <div class="popular">인기상품</div>
+            <div class="mid_text">
+              <p class="item_name">두피강화 클리닉 캡슐 트리트먼트 220ml 4개<br>+두피강화 샴푸 112ml 2개</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">40%</p>
+              <p class="sale_price">38,500원</p>
+              <p class="price">64,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">33,880원</p>
+            </div>
+          </div>
+          <div class="show_item">
+            <img class="num_icon" src="./images/ico-thumbnail-rank.svg" alt="번호 아이콘">
+            <img src="./images/Labo_best_8.jpg" alt="탈모증상완화 민감더마 샴푸 400ml">
+            <p class="num">08</p>
+            <div class="top_text">
+              <p class="review">리뷰 3</p>
+              <p class="review_star">★</p>
+              <p class="review_score">5.0</p>
+            </div>
+            <div class="mid_text">
+              <p class="item_name">두피강화 라인 쟁이기세트</p>
+            </div>
+            <div class="bot_text">
+              <p class="sale_amper">45%</p>
+              <p class="sale_price">51,800원</p>
+              <p class="price">93,000원</p>
+            </div>
+            <div class="foot_text">
+              <p class="max_sale">최대혜택가</p>
+              <p class="max_sale_price">45,590원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- SPECIAL_ITEMS -->
+    <section class="planning">
+      <div class="head_line">
+          <p>기획전</p>
+      </div>
+      <div class="inner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_1.jpg" alt="라보에이치 크리스마스 페스티벌 산타가 전하는 두피 선물">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_2.jpg" alt="비듬/각질/가려움 예방 NEW 댄드러프 샴푸">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_3.jpg" alt="웰컴 10% OFF + 플친전용 추가쿠폰까지!">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_4.jpg" alt="라보에이치 공식몰 APP 출시기념 이벤트">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_5.jpg" alt="마음을 전하는 가장 쉬운 방법 라보에이치 공식몰 선물하기">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_6.jpg" alt="BEST 추천 딜! UP TO 46% OFF">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_7.jpg" alt="라보에이치 공식몰 첫 구매 웰컴 900원 딜">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_8.jpg" alt="BLACK FRIDAY 1년을 기다린 직영몰 쇼핑찬스!">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_plannig_banner_9.jpg" alt="1년치 쟁이기 구성 최대 46% + 사은품">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-prev">
+            <span class="material-icons-round">arrow_back_ios_new</span>
+          </div>
+          <div class="swiper-next">
+            <span class="material-icons-round">arrow_forward_ios</span>
+          </div>
+        </div> <!-- swiper-container -->
+      </div>
+    </section>
+    <section class="event">
+      <div class="head_line">
+          <p>EVENT</p>
+      </div>
+      <div class="inner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_1.jpg" alt="1년을 기다린 라보에이치 직영몰 쇼핑찬스! BLACK FRIDAY">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_2.jpg" alt="지금 구매시 여행용 샴푸 100% 증정 최대 46% + 사은품 1년치 쟁이기 구성">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_3.jpg" alt="라보에이치몰 공식몰 APP전용 혜택 받아가세요. APP 출시기념 이벤트">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_4.jpg" alt="지금 1초 가입하고 받아가세요! + 플친 전용 추가 쿠폰까지! 웰컴 10% OFF">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_5.jpg" alt="첫구매라면 무조건 클릭! 라보에이치 공식몰 첫 구매 웰컴 900원 딜">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_6.jpg" alt="멤버전용 / 쟁이기세트 BEST 추천 딜! UP TO 46% OFF">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_7.jpg" alt="친구에게 카톡만 보내도 건당 100원 드려요! 친구 추천 이벤트">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_8.jpg" alt="마음을 전하는 가장 쉬운 방법 라보에이치 공식몰 선물하기 선물하기 활용백서">
+            </div>
+            <div class="swiper-slide">
+              <img src="./images/Labo_event_9.jpg" alt="일리윤 x 라보에이치 직영몰 콜라보 이벤트 일리윤 직영몰 바로가기">
+            </div>
+          </div>
+          <div class="swiper-prev">
+            <span class="material-icons-round">arrow_back_ios_new</span>
+          </div>
+          <div class="swiper-next">
+            <span class="material-icons-round">arrow_forward_ios</span>
+          </div>
+        </div> <!-- swiper_container -->
+      </div>
+    </section>
+    <section class="story">
+      <div class="inner">
+        <div class="head_line">
+          <p>브랜드 스토리</p>
+        </div>
+        <img src="./images/Labo_story.png" alt="라보에이치 스토리 영상">
+        <div class="foot_line">
+          <div class="more_story">
+            <p>브랜드 스토리 보러가기 ></p>
+          </div>
+        </div>
+      </div>
+    </section>
+   </div> <!-- body_layout -->
+   <!-- FOOT -->
+   <div id="foot_layout">
+    <div class="inner">
+      <div class="foot_left_wrap">
+        <img src="./images/Labo_logo_white.svg" alt="LABO-H 하얀 로고">
+        <ul class="top_text">
+          <li>이용약관</li>
+          <li>사업자정보확인</li>
+          <li>개인정보 처리방침</li>
+          <li>고객센터</li>
+          <li>두피 컨설팅 시스템</li>
+          <li>랩노트</li>
+        </ul>
+        <ul class="mid_text">
+          <li><p>(주)아모레퍼시픽</p></li>
+          <li><p>서울특별시 용산구 한강대로 100(한강로2가)</p></li>
+        </ul>
+        <ul class="mid_text">
+          <li><p>대표이사 : 김승환</p></li>
+          <li><p>사업자 번호 : 106-86-43373</p></li>
+          <li><p>통신판매업신고번호 : 2017-서울용산-1308</p></li>
+        </ul>
+        <ul class="mid_text">
+          <li><p>labo-h@amorepacific.com</p></li>
+          <li><p>호스팅제공자 : CAFE24</p></li>
+        </ul>
+        <ul class="mid_text">
+          <li><p>배송 및 교환 : 080-848-2727</p></li>
+          <li><p>제품문의 : 080-023-5454 [평일 AM 09:00 ~ PM 18:00 / 주말, 공휴일 휴무 점심 / PM 12:00 ~ PM 13:00]</p></li>
+        </ul>
+        <p>AMOREPACIFIC CORPORATION.ALL RIGHTS RESERVED</p>
+      </div> <!-- foot_left_wrap -->
+      <div class="foot_right_wrap">
+        <ul class="sns_link">
+          <li><img src="./images/icon__footer--instagram.png" alt="라보에이치 인스타그램 링크"></li>
+          <li><img src="./images/icon__footer--kakao.png" alt="라보에이치 카카오톡 링크"></li>
+          <li><img src="./images/icon__footer--youtube.png" alt="라보에이치 유튜브 링크"></li>
+        </ul>
+        <div class="labo_qr_link">
+          <ul>
+            <li><p>라보에이치 공식몰 앱 다운로드</p></li>
+            <li><p>라보에이치 공식몰 앱, 지금 다운로드하세요!</p></li>
+            <li><p>편리한 쇼핑과 풍성한 혜택이 기다리고 있어요.</p></li>
+          </ul>
+          <img src="./images/laboh-qrcode.svg" alt="라보에이치 공식몰 앱 QR코드">
+        </div>
+        <ul class="bot_text">
+          <li>구매안전 서비스 제공 안내 <span>가입 사실 확인 ></span></li>
+          <li>저희 쇼핑몰은 고객님의 안전거래를 위해 모든 무통장입금 및</li>
+          <li>실시간 계좌이체 주문에 대해 케이에스넷의 에스크로</li>
+          <li>구매안전서비스를 자동 적용하고 있습니다.</li>
+        </ul>
+      </div>
+    </div> <!-- inner -->
+   </div> <!--FOOT LAYOUT -->
 </body>
 </html>
